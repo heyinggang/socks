@@ -7,19 +7,17 @@
 
 #ifndef COMMON_H
 #define COMMON_H
-
 #include <inttypes.h>
-
 #define LBUFF_SIZE 512
-
-struct LinkBuff{
-    uint8_t* buf;
-    int size;
-    LinkBuff* next;
+struct LinkBuff
+{
+  uint8_t *buf;
+  int size;
+  LinkBuff *next;
 };
 
-namespace LinkBuffUtil{
-    void dofree(struct LinkBuff* ptr);
+namespace LinkBuffUtil
+{
+void dofree(struct LinkBuff *ptr);
 };
-
 #endif
